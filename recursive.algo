@@ -1,0 +1,22 @@
+ALGORITHM Is palindrome
+VAR
+  str : STRING;
+  n , demi , i: INTEGER ;
+  pal : BOOLEAN ;  
+BEGIN
+ read(str);
+ n:= str.length ;
+ demi := n/2 ;
+ FOR i FROM 0 TO demi STEP 1  DO
+     IF (str[i] == str[n-i-1] || str == "" || str.length == 1) THEN
+         pal := true ;
+     ELSE 
+    pal:= false ;
+    END_IF
+ END_FOR
+IF (pal == true) THEN
+    write ("the word is palindrome");
+ELSE
+    write ("the word is not palindrome");
+END_IF
+END
